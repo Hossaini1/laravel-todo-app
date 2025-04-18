@@ -8,12 +8,20 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
-    // public function index(){
-    //     $todos = Todo::all();
+    public function index(){
 
-    //     return view('todos.index',compact('todos'));
+        $todos = Todo::all();
+        return view('todos.index',compact('todos'));
 
-    // }
+    }
+
+    public function show(Todo $todo){
+
+        // dd($todo);
+       
+        return view('todos.show',compact('todo'));
+
+    }
 
     public function create()
     {
@@ -42,5 +50,7 @@ class TodoController extends Controller
             'description'=>$req->description,
             'category_id'=>$req->category_id
         ]);
+
+        return redirect()->route('todo.index');
     }
 }
