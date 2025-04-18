@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -61,4 +62,6 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('category.index');
     }
+
+  
 }
