@@ -26,12 +26,12 @@
                             <td>{{ $todo->category->title }}</td>
                             <td>
                                 <a href="{{ route('todo.show', ['todo' => $todo->id]) }}"
-                                    class="btn btn-sm btn-info">Show</a>
+                                    class="btn btn-sm btn-info">Show todo</a>
                                 @if ($todo->status)
                                     <button disabled class="btn btn-sm btn-outline-muted">Completed</button>
                                 @else
                                     <a href="{{ route('todo.completed', ['todo' => $todo->id]) }}"
-                                        class="btn btn-sm btn-success ">Done?</a>
+                                        class="btn btn-sm btn-success ">Done ?</a>
                                 @endif
                             </td>
                         </tr>
