@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="">Todos</h5>
-            <a href="{{ route('todo.create') }}" class="btn btn-dark">Create todo</a>
+            <a href="{{ route('todo.create') }}" class="btn btn-secondary">Create todo</a>
         </div>
         <div class="card-body">
             <table class="table table-striped align-middle">
@@ -30,16 +30,16 @@
                                 @if ($todo->status)
                                     <button disabled class="btn btn-sm btn-outline-muted">Completed</button>
                                 @else
-                                    <a href="{{ route('todo.completed', ['todo'=>$todo->id]) }}" class="btn btn-sm btn-success ">Done?</a>
+                                    <a href="{{ route('todo.completed', ['todo' => $todo->id]) }}"
+                                        class="btn btn-sm btn-success ">Done?</a>
                                 @endif
                             </td>
                         </tr>
                     @endforeach
 
-
-
                 </tbody>
             </table>
+            {{ $todos->links('layout.paginate') }}
         </div>
     </div>
 @endsection

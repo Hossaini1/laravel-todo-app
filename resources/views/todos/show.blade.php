@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5>Todo</h5>
-            <a href="{{ route('todo.index') }}" class="btn btn-dark">Back</a>
+            <a href="{{ route('todo.index') }}" class="btn btn-secondary">Back</a>
         </div>
         <div class="card-body">
             <div class="mb-3 text-center">
@@ -30,7 +30,7 @@
                 <textarea disabled class="form-control" name="description" rows="3">{{ $todo->description }}</textarea>
             </div>
             <div>
-                <a href="{{ route('todo.edit', ['todo' => $todo->id]) }}" class="btn btn-secondary">Edit</a>
+                <a href="{{ route('todo.edit', ['todo' => $todo->id]) }}" class="btn btn-primary">Edit</a>
                 <form action="{{ route('todo.destroy', ['todo' => $todo->id]) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')

@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <h5 class="">Edit Todo</h5>
-        <a href="{{ route('todo.index') }}" class="btn btn-dark">Back</a>
+        <a href="{{ route('todo.index') }}" class="btn btn-secondary">Back</a>
     </div>
     <div class="card-body">
         <form action="{{ route('todo.update', ['todo'=>$todo->id]) }}" method="POST" enctype="multipart/form-data">
